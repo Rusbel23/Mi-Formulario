@@ -1,0 +1,151 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 650px;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; 
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+#resultados{
+    color: #ffffff;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #601212;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+.botones-formulario {
+    display: flex;
+    gap: 10px; 
+}
+
+button[type="button"],
+button[type="reset"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="button"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+select .opcion-negrita {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column; 
+    }
+
+    .contenedor {
+        max-width: 100%;
+    }
+
+    .botones-formulario {
+        flex-direction: column; 
+    }
+
+    button[type="button"],
+    button[type="reset"] {
+        width: 100%;
+    }
+}
+
+.grupo-formulario.etiquetas-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.grupo-formulario.etiquetas-inline label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
